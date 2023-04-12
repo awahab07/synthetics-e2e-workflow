@@ -9,7 +9,6 @@ journey('Github Actions Test', ({ page, params }) => {
   });
   step('launch application', async () => {
     await page.goto(params.url);
-    await page.click('text=NonExistent', { timeout: 300 });
   });
 
   step('assert title', async () => {
