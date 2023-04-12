@@ -15,7 +15,7 @@ jobs:
       - run: npm install
       - run: npm start &
       - run: "npm install @elastic/synthetics && SYNTHETICS_JUNIT_FILE='junit-synthetics.xml' npx @elastic/synthetics . --reporter=junit"
-        working-directory: ./apps/synthetics-replicator-tests/journeys
+        working-directory: .
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
@@ -29,7 +29,7 @@ jobs:
     needs: test
     defaults:
       run:
-        working-directory: ./apps/synthetics-replicator-tests
+        working-directory: .
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
