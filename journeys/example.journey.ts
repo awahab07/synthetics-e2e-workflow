@@ -1,10 +1,10 @@
 import { journey, step, monitor, expect } from '@elastic/synthetics';
 
-journey('My Example Journey', ({ page, params }) => {
+journey('Github Actions Test', ({ page, params }) => {
   // Only relevant for the push command to create
   // monitors in Kibana
   monitor.use({
-    id: 'example-monitor',
+    id: 'github-actions-test',
     schedule: 10,
   });
   step('launch application', async () => {
