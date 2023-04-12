@@ -26,7 +26,7 @@ jobs:
     env:
       NODE_ENV: production
       SYNTHETICS_API_KEY: ${{ secrets.SYNTHETICS_API_KEY }}
-    needs: test
+    needs: run_e2e_tests
     defaults:
       run:
         working-directory: .
