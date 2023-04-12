@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [main, master]
 jobs:   
-  test:
+  run_e2e_tests:
     env:
       NODE_ENV: development
     runs-on: ubuntu-latest

@@ -3,7 +3,7 @@ on:
   push:
     branches: [main, master]
 jobs:   
-  test:
+  run_e2e_tests:
     env:
       NODE_ENV: development
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
         with:
           junit_files: '**/junit-*.xml'
           check_name: Elastic Synthetics Tests
-  push:
+  push_e2e_tests:
     env:
       NODE_ENV: production
       SYNTHETICS_API_KEY: ${{ secrets.SYNTHETICS_API_KEY }}
