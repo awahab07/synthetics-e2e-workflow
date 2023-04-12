@@ -1,0 +1,3 @@
+node_modules/
+.synthetics/
+.vscode
